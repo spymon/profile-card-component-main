@@ -49,6 +49,33 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  background-image: url(images/bg-pattern-top.svg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: -900px;
+  left: -400px;
+  width: 1350px;
+  height: 1350px;
+  z-index: 1;
+}
+section::after {
+  content: '';
+  background-image: url(images/bg-pattern-bottom.svg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  bottom: -900px;
+  right: -400px;
+  width: 1350px;
+  height: 1350px;
+  z-index: 1;
 }
 
 section .card {
@@ -56,9 +83,10 @@ section .card {
   width: 350px;
   height: 375px;
   border-radius: 20px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2), 0 15px 60px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
+  z-index: 2;
 }
 
 section .card .card-header {
@@ -105,9 +133,59 @@ section .card .card-person h2 span {
   font-weight: 400;
 }
 
-section .card .card-person p {
+section .card .card-person p,
+section .card .card-footer ul li p {
   margin-top: 15px;
   color: hsl(0, 0%, 59%);
   font-weight: 400;
   letter-spacing: 1px;
+}
+
+section .card .card-footer {
+  padding: 50px 20px 10px;
+}
+
+section .card .card-footer ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section .card .card-footer ul li {
+  list-style-type: none;
+  text-align: center;
+}
+
+section .card .card-footer ul li p {
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+section .attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 7px 0;
+  text-align: center;
+  transition: 0.3s;
+  z-index: 3;
+  transform: translateY(27px);
+}
+
+section .attribution::before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  height: 60px;
+}
+
+section .attribution:hover {
+  transform: translateY(0);
+}
+
+section .attribution a {
+  text-decoration: none;
 }

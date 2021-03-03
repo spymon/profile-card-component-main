@@ -1,0 +1,113 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Dark cyan: hsl(185, 75%, 39%)
+Very dark desaturated blue: hsl(229, 23%, 23%)
+Dark grayish blue: hsl(227, 10%, 46%)
+
+### Neutral
+
+Dark gray: hsl(0, 0%, 59%)
+
+## Typography
+
+### Body Copy
+
+- Font size (name and stats): 18px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  background-color: hsl(185, 75%, 39%);
+  color: hsl(229, 23%, 23%);
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .card {
+  background-color: #fff;
+  width: 350px;
+  height: 375px;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+section .card .card-header {
+  background-image: url(images/bg-pattern-card.svg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 140px;
+}
+
+section .card .card-person {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+section .card .card-person .imgBx {
+  border: 4px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+}
+
+section .card .card-person .imgBx img {
+  max-width: 100%;
+}
+
+section .card .card-person h2 {
+  font-size: 18px;
+  margin-top: 25px;
+  font-weight: 700;
+}
+
+section .card .card-person h2 span {
+  margin-left: 10px;
+  color: hsl(0, 0%, 59%);
+  font-weight: 400;
+}
+
+section .card .card-person p {
+  margin-top: 15px;
+  color: hsl(0, 0%, 59%);
+  font-weight: 400;
+  letter-spacing: 1px;
+}

@@ -102,15 +102,15 @@ section .card .card-person {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 0 25px;
 }
 
 section .card .card-person .imgBx {
   border: 4px solid #fff;
   border-radius: 50%;
   overflow: hidden;
-  width: 100px;
-  height: 100px;
+  width: 104px;
+  height: 104px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,6 +135,7 @@ section .card .card-person h2 span {
 
 section .card .card-person p,
 section .card .card-footer ul li p {
+  font-size: 14px;
   margin-top: 15px;
   color: hsl(0, 0%, 59%);
   font-weight: 400;
@@ -142,7 +143,7 @@ section .card .card-footer ul li p {
 }
 
 section .card .card-footer {
-  padding: 50px 20px 10px;
+  padding: 45px 25px 0 25px;
 }
 
 section .card .card-footer ul {
@@ -158,7 +159,6 @@ section .card .card-footer ul li {
 
 section .card .card-footer ul li p {
   margin-top: 7px;
-  font-size: 14px;
 }
 
 section .attribution {
